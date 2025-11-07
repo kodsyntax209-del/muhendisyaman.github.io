@@ -1,0 +1,11 @@
+// Küçük parlayan efektler
+console.log("✨ Mühendis Yaman web sitesi yüklendi! ✨");
+
+// Dinamik buton efekti
+const btn = document.querySelector('.btn');
+btn.addEventListener('mousemove', e => {
+    const x = e.pageX - btn.offsetLeft;
+    const y = e.pageY - btn.offsetTop;
+    btn.style.setProperty('--x', `${x}px`);
+    btn.style.setProperty('--y', `${y}px`);
+});
